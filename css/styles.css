@@ -123,6 +123,13 @@ a {
     padding: 188px 0;
     background: #2e2f42;
     height: 600px;
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/worktable.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .headline {
@@ -316,11 +323,14 @@ a {
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-four-li {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: calc((100% - 48px) / 3);
     background: #fff;
+    border: 1px solid #e7e9fc;
 }
 
 .portfoliocard {
@@ -361,14 +371,18 @@ a {
 
 .footer {
     background-color: #2e2f42;
-    /* display: flex; */
-    /* display: inline-block; */
-    /* align-items: center; */
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 0px;
     padding: 100px 0;
     height: 312px;
+}
+
+.container-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.footer-box {
+    margin-right: 120px;
 }
 
 .footer-text {
@@ -377,12 +391,8 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    max-width: 264px;
-
-    /* align-items: center; */
-    /* justify-content: flex-start;
-    flex-direction: row;
-    gap: 0px; */
+    width: 264px;
+    height: 72px;
 }
 
 .footer-logo {
@@ -399,4 +409,147 @@ a {
 
 .footer-logo-white {
     color: #f4f4fd;
+}
+
+
+
+/* --- 4th HOMEWORK --- */
+
+
+
+.header-link-studio {
+    position: relative;
+    color: #404bbf;
+}
+
+.header-link-studio::after {
+    content: "";
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background-color: #404bbf;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.section-two-svg {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-link-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.icon-link-li {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-socials {
+    fill: #f4f4fd;
+}
+
+
+.section-four-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-text-overlay {
+    position: absolute;
+    top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background: #4d5ae5;
+    height: 100%;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-four-li:hover .image-text-overlay {
+    transform: translateY(0);
+}
+
+.footer-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.footer-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.footer-a {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.footer-social-icon {
+    fill: #f4f4fd;
+}
+
+.container-footer {
+    width: 264px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    margin-left: 112px;
 }
